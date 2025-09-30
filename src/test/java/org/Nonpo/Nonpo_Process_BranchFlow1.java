@@ -186,6 +186,8 @@ public class Nonpo_Process_BranchFlow1 extends BaseClass {
 		element2.sendKeys("1");
 		thread();
 
+				waitWithTimeout(driver, 20);
+
 
 		driver.findElement(By.xpath("//span[contains(text(), '100000') and contains(text(), 'A.MGR Co. Pte Ltd')]")).click();
 		thread();

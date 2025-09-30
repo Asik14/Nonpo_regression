@@ -106,6 +106,9 @@ public class Nonpo_Process_BranchFlow1 extends BaseClass {
 
 		thread();
 
+				wait(500);
+
+
 
 		// Create Robot instance
 		java.awt.Robot robot = new java.awt.Robot();

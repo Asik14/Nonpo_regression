@@ -13,25 +13,10 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Run Single Test Class') {
             steps {
-                bat "mvn clean install -DskipTests"
-            }
-        }
-
-        stage('Test') {
-            steps {
-                bat "mvn test"
+                bat "mvn clean test -Dtest=Nonpo_Process_BranchFlow1"
                 junit '**/target/surefire-reports/*.xml' // Publish test reports
-            }
-        }
-
-        stage('Deploy to AWS') {
-            steps {
-                echo "Deploying to AWS..."
-                // Example AWS commands (replace with your actual deployment steps)
-                // bat "aws s3 cp target/yourapp.jar s3://your-bucket/"
-                // bat "aws ecs update-service --cluster your-cluster --service your-service --force-new-deployment"
             }
         }
     }

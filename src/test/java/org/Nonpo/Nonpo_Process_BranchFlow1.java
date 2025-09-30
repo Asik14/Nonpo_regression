@@ -308,7 +308,7 @@ public class Nonpo_Process_BranchFlow1 extends BaseClass {
 
 
 
-		Thread.sleep(1000);
+		Thread.sleep(1500);
 
 		java.awt.Robot r111 = new java.awt.Robot();
 		r111.setAutoDelay(800);

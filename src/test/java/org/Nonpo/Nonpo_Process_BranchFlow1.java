@@ -82,7 +82,7 @@ public class Nonpo_Process_BranchFlow1 extends BaseClass {
 		}
 
 
-		wait(100);	
+		wait(200);	
 
 		WebElement loginbutn = driver.findElement(By.xpath("//*[text()='Login']"));
 		wait(10);

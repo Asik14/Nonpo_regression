@@ -176,7 +176,7 @@ public class Nonpo_Process_BranchFlow1 extends BaseClass {
 
 		driver.findElement(By.xpath("//*[text()='Vendor Id']")).click();
 
-		wait(500);
+		wait(600);
 
 
 		WebElement element2 = driver.findElement(By.xpath("//*[@aria-label='Search for Vendor Id']"));

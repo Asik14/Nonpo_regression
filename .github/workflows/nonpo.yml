@@ -3,45 +3,35 @@ name: Nonpo Regression Automation
 on:
   push:
     branches:
-      - main   # Trigger only when code is pushed to main branch
+      - main
 
 jobs:
-  test:
-    runs-on: windows-latest   # Using Windows runner
+  build:
+    runs-on: windows-latest   # or ubuntu-latest if you prefer
 
     steps:
-      # 1️⃣ Checkout the repository
-      - name: Checkout Code
-        uses: actions/checkout@v3
+      # 1️⃣ Checkout code
+      - uses: actions/checkout@v3
 
-      # 2️⃣ Set up Java 17 with Maven cache
-      - name: Setup Java
+      # 2️⃣ Set up Java
+      - name: Set up Java
         uses: actions/setup-java@v3
         with:
           java-version: '17'
-          distribution: 'temurin'
-          cache: maven
 
-      # 3️⃣ Build the project (skip tests here)
-      - name: Build with Maven
-        run: mvn clean install -DskipTests=true
-
-      # 4️⃣ Set up Chrome for UI tests
-      - name: Set up Chrome
-        uses: browser-actions/setup-chrome@latest
-
-      # 5️⃣ Set up ChromeDriver matching Chrome version
+      # 3️⃣ Set up ChromeDriver for Selenium (if needed)
       - name: Set up ChromeDriver
         uses: nanasess/setup-chromedriver@v2
 
-      # 6️⃣ Run TestNG tests using repo XML (single class) — Windows fix applied
+      # 4️⃣ Run TestNG suite (single class controlled by XML)
       - name: Run TestNG Tests
-        shell: cmd
-        run: mvn.cmd clean test -DsuiteXmlFile=src/test/resources/reo_testng.xml
+        run: mvn clean test
+        shell: cmd  # if using Windows
 
-      # 7️⃣ Upload Surefire/TestNG reports for review
+      # 5️⃣ Upload TestNG reports
       - name: Upload TestNG Reports
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
-          name: testng-reports
-          path: target/surefire-reports/
+          name: TestNG-Reports
+          path: target/surefire-reports
+

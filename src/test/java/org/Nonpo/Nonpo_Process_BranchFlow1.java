@@ -127,7 +127,7 @@ public class Nonpo_Process_BranchFlow1 extends BaseClass {
 
 
 		jsclick(driver, jss);
-		wait(500);
+		wait(600);
 
 
 		driver.findElement(By.xpath("//*[text()='Petty Cash']")).click();

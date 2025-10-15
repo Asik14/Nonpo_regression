@@ -106,7 +106,7 @@ public class Nonpo_Process_BranchFlow1 extends BaseClass {
 
 		thread();
 
-				wait(700);
+				wait(600);
 
 
 

@@ -465,7 +465,7 @@ public class Nonpo_Process_BranchFlow1 extends BaseClass {
 		//BACK BUTTON
 		Thread.sleep(1000);
 
-		waitWithTimeout(driver, 20);
+		waitWithTimeout(driver, 25);
 
 		Thread.sleep(2000);
 

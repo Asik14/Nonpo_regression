@@ -158,7 +158,7 @@ public class Nonpo_Process_BranchFlow1 extends BaseClass {
 		driver.findElement(By.xpath("(//*[@autocomplete='off'])[2]")).click();
 
 
-		wait(1000);
+		wait(900);
 
 
 		driver.findElement(By.xpath("(//*[@role='button'])[3]")).click();

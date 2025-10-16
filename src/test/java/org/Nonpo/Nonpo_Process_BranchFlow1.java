@@ -119,7 +119,7 @@ public class Nonpo_Process_BranchFlow1 extends BaseClass {
 			robot.keyPress(KeyEvent.VK_MINUS);
 			robot.keyRelease(KeyEvent.VK_MINUS);
 			robot.keyRelease(KeyEvent.VK_CONTROL);
-			Thread.sleep(500);
+			Thread.sleep(550);
 		}
 
 

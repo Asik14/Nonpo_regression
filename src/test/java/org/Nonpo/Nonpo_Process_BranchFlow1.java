@@ -598,7 +598,7 @@ public class Nonpo_Process_BranchFlow1 extends BaseClass {
 
 		wait(2000);
 
-		Thread.sleep(1000);
+		Thread.sleep(1100);
 
 		driver.findElement(By.xpath("//*[@autocomplete='off']")).sendKeys("Testing - Approve 1 ");
 

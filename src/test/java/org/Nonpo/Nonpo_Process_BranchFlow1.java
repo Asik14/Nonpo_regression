@@ -591,7 +591,7 @@ public class Nonpo_Process_BranchFlow1 extends BaseClass {
 		}
 
 
-		Thread.sleep(1000);
+		Thread.sleep(1200);
 
 
 		driver.findElement(By.xpath("(//*[text()='Approve'])[1]")).click();

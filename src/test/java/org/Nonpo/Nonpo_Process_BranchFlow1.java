@@ -365,7 +365,7 @@ public class Nonpo_Process_BranchFlow1 extends BaseClass {
 		jsc.click();
 
 
-		Thread.sleep(2000);
+		Thread.sleep(2200);
 
 		driver.findElement(By.xpath("//*[text()='History']")).click();
 
